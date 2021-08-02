@@ -2,9 +2,10 @@
   "name": "network-laboratory",
   "version": "0.0.1",
   "description": "Making complex network traffic for experiment",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
+    "dev": "nodemon server",
     "test": "npm t"
   },
   "private": true,
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/outsideris/network-laboratory#readme",
   "dependencies": {
     "fastify": "^3.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
