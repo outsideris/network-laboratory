@@ -4,6 +4,7 @@
   "description": "Making complex network traffic for experiment",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "test": "npm t"
   },
   "private": true,
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/outsideris/network-laboratory/issues"
   },
-  "homepage": "https://github.com/outsideris/network-laboratory#readme"
+  "homepage": "https://github.com/outsideris/network-laboratory#readme",
+  "dependencies": {
+    "fastify": "^3.19.2"
+  }
 }
