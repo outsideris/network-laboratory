@@ -1,2 +1,5 @@
 = Network Laboratory
 Making complex network traffic for experiment
+
+== Prerequisites
+* Node.js 16+
