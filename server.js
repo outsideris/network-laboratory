@@ -1,6 +1,6 @@
 const fastify = require('fastify')({ logger: true });
 
-fastify.get('/', async () => ({ hello: 'world' }));
+fastify.register(require('./routes/system'));
 
 const start = async () => {
   try {
@@ -10,4 +10,5 @@ const start = async () => {
     process.exit(1);
   }
 };
+
 start();
