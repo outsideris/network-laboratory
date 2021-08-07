@@ -7,7 +7,8 @@
     "start": "node server",
     "dev": "nodemon server",
     "lint": "eslint .",
-    "test": "mocha --recursive test/*.spec.js"
+    "test": "mocha --recursive test/*.spec.js",
+    "fastify": "fastify"
   },
   "private": true,
   "repository": {
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/outsideris/network-laboratory#readme",
   "dependencies": {
     "fastify": "^3.19.2",
+    "fastify-cli": "^2.13.0",
     "fastify-plugin": "^3.0.0"
   },
   "devDependencies": {
