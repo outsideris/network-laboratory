@@ -1,14 +1,19 @@
-const fastify = require('fastify')({ logger: true });
+const path = require('path');
+const AutoLoad = require('fastify-autoload');
 
-fastify.register(require('./routes/system'));
+module.exports = async function (fastify, opts) {
+  // This loads all plugins defined in plugins
+  // those should be support plugins that are reused
+  // through your application
+  fastify.register(AutoLoad, {
+    dir: path.join(__dirname, 'plugins'),
+    options: { ...opts },
+  });
 
-const start = async () => {
-  try {
-    await fastify.listen(3000);
-  } catch (err) {
-    fastify.log.error(err);
-    process.exit(1);
-  }
+  // This loads all plugins defined in routes
+  // define your routes in one of these
+  fastify.register(AutoLoad, {
+    dir: path.join(__dirname, 'routes'),
+    options: { ...opts },
+  });
 };
-
-start();

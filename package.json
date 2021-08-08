@@ -4,8 +4,8 @@
   "description": "Making complex network traffic for experiment",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server",
+    "start": "fastify start server.js",
+    "dev": "fastify start -w -P server.js",
     "lint": "eslint .",
     "test": "mocha --recursive test/*.spec.js",
     "fastify": "fastify"

@@ -1,5 +1,5 @@
-async function healthz(fastify) {
-  fastify.get('/healthz', async () => 'ok');
-}
-
-module.exports = healthz;
+module.exports = async function system(fastify) {
+  fastify.get('/healthz', async function healthz() {
+    return 'ok1';
+  });
+};
