@@ -4,8 +4,10 @@
   "description": "Making complex network traffic for experiment",
   "main": "server.js",
   "scripts": {
-    "start": "fastify start server.js",
-    "dev": "fastify start -w -P server.js",
+    "leader": "fastify start -l info leader.js",
+    "follower": "fastify start -l info follower.js",
+    "dev:leader": "fastify start -w -l info -p 5000 -P leader.js",
+    "dev:follower": "fastify start -w -l info -P follower.js",
     "lint": "eslint .",
     "test": "mocha --recursive test/*.spec.js",
     "fastify": "fastify"
